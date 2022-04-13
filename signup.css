@@ -12,6 +12,11 @@ h1 {
 em {
   font-style: italic;
 }
+a,
+a:visited {
+  font: inherit;
+  text-decoration: inherit;
+}
 body {
   font-family: "Noto Sans", sans-serif;
   height: 100vh;
@@ -116,13 +121,28 @@ form button:hover,
 form button:focus {
   background-color: var(--accent-color-secondary);
 }
-form p > a {
+form a {
   font-weight: 800;
   color: var(--accent-color);
   text-decoration: none;
 }
-form p > a:hover {
+a:hover {
   text-decoration: underline;
+}
+footer {
+  padding: 15px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+a[href*="github"]::before {
+  content: " ";
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  background: url(assets/github.svg);
+  background-size: cover;
 }
 
 @media (max-width: 600px) {
