@@ -1,4 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --burgundybrown: rgb(105, 41, 41);
+}
+h1 {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+em {
+  font-style: italic;
+}
 body {
   font-family: "Noto Sans", sans-serif;
   height: 100vh;
@@ -25,4 +35,20 @@ aside #logo-container {
 }
 aside #logo-container h1::before {
   content: "😭";
+}
+#right-container {
+  height: 100%;
+  color: beige;
+  background-color: var(--burgundybrown);
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+#right-container > * {
+  flex: 1;
+  padding: 15px;
+}
+#right-container form {
+  background-color: beige;
+  color: var(--burgundybrown);
 }
