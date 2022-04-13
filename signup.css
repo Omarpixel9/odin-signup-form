@@ -46,9 +46,48 @@ aside #logo-container h1::before {
 }
 #right-container > * {
   flex: 1;
-  padding: 15px;
+  padding: 25px;
 }
 #right-container form {
   background-color: beige;
   color: var(--burgundybrown);
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+#right-container form fieldset {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+#right-container form fieldset > span {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: max(250px, 30%);
+}
+#right-container form label {
+  text-transform: uppercase;
+  font-weight: 200;
+}
+#right-container form input {
+  /* width: auto; */
+  font-size: 1.2rem;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 15px;
+  background-color: var(--burgundybrown);
+  color: white;
+  font-weight: bold;
+  font-family: inherit;
+}
+#right-container form input:focus {
+  outline: 2px solid black;
+  background-color: rgb(149, 65, 65);
+}
+
+@media (max-width: 600px) {
+  aside {
+    display: none;
+  }
 }
