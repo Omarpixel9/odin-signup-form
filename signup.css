@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 :root {
-  --burgundybrown: rgb(105, 41, 41);
+  --main-color: rgb(105, 41, 41);
+  --secondary-color: rgb(149, 65, 65);
+  --accent-color: rgb(79, 41, 105);
+  --accent-color-secondary: rgb(47, 24, 63);
 }
 h1 {
   font-size: 1.5rem;
@@ -12,6 +15,7 @@ em {
 body {
   font-family: "Noto Sans", sans-serif;
   height: 100vh;
+  background-color: beige;
 }
 main {
   height: 100%;
@@ -39,7 +43,7 @@ aside #logo-container h1::before {
 #right-container {
   height: 100%;
   color: beige;
-  background-color: var(--burgundybrown);
+  background-color: var(--main-color);
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -48,9 +52,21 @@ aside #logo-container h1::before {
   flex: 1;
   padding: 25px;
 }
+#right-container header {
+  font-size: 1.5rem;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  justify-content: flex-end;
+  flex: 0.5;
+}
+#right-container header p {
+  line-height: 2rem;
+}
 #right-container form {
   background-color: beige;
-  color: var(--burgundybrown);
+  color: var(--main-color);
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -59,12 +75,13 @@ aside #logo-container h1::before {
   display: flex;
   gap: 25px;
   flex-wrap: wrap;
+  align-items: center;
 }
 #right-container form fieldset > span {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  width: max(250px, 30%);
+  width: max(250px, 40%);
 }
 #right-container form label {
   text-transform: uppercase;
@@ -76,14 +93,36 @@ aside #logo-container h1::before {
   padding: 15px 20px;
   border: none;
   border-radius: 15px;
-  background-color: var(--burgundybrown);
+  background-color: var(--main-color);
   color: white;
   font-weight: bold;
   font-family: inherit;
 }
 #right-container form input:focus {
   outline: 2px solid black;
-  background-color: rgb(149, 65, 65);
+  background-color: var(--secondary-color);
+}
+
+form button {
+  border: none;
+  padding: 15px 30px;
+  border-radius: 15px;
+  background-color: var(--accent-color);
+  color: white;
+  font: inherit;
+  font-weight: bold;
+}
+form button:hover,
+form button:focus {
+  background-color: var(--accent-color-secondary);
+}
+form p > a {
+  font-weight: 800;
+  color: var(--accent-color);
+  text-decoration: none;
+}
+form p > a:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 600px) {
